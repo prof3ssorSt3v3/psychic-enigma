@@ -1,0 +1,87 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  border-bottom: 3px solid black;
+  background-color: lightcoral;
+  padding: 2rem;
+}
+.nav {
+  display: flex;
+  gap: 2rem;
+  & a {
+    color: black;
+    font-size: 1.2rem;
+  }
+  & a.active,
+  & a:hover {
+    color: white;
+  }
+}
+main {
+  padding: 2rem;
+}
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.box {
+  border: 1px solid #222;
+  max-width: 300px;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: calc(200px);
+  outline: 0px solid hsla(20, 80%, 80%, 0.8);
+  background-color: #fff;
+  transition: all 0.3s linear;
+}
+.box:hover {
+  outline: 2px solid hsla(20, 80%, 80%, 0.8);
+  background-color: hsla(20, 80%, 80%, 0.2);
+}
+.swatch {
+  border-radius: 1rem;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #999;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  font-size: 5rem;
+  text-align: center;
+  animation: pulse 1s linear 0s infinite reverse forwards;
+  transform-origin: center;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
