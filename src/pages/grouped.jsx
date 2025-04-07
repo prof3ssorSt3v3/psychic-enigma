@@ -3,6 +3,7 @@ import { useColor } from '../context/color.provider';
 // import { NavLink } from 'react-router';
 import ColorBox from '../components/color.box';
 import Loading from '../components/loading';
+import ColorForm from '../components/color.form';
 
 export default function Grouped() {
   const { color, colorList, colorGroupList, setColor, setColorList, setColorGroupList, getColorById, getColorByValue, makeGroupList, addColor } = useColor();
@@ -11,6 +12,9 @@ export default function Grouped() {
     <div>
       <Header />
       <main>
+        <h1>Add a Color</h1>
+        <ColorForm />
+
         <h1>Grouped Color Categories</h1>
 
         <section>

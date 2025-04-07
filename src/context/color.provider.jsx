@@ -45,15 +45,17 @@ function ColorProvider(props) {
     setColorGroupList(grouped);
   }
 
-  function addColor(_group, _hex) {
+  function addColor(_hex, _group) {
     let obj = {
       id: crypto.randomUUID(),
       group: _group,
       hex: _hex,
     };
     setColor(obj);
-    colorList.push(obj);
-    setColorList([...colorList]);
+    let _list = [...colorList];
+    _list.push(obj);
+    setColorList(_list);
+    makeGroupList(_list);
   }
 
   return <ColorContext.Provider {...props} value={{ color, colorList, colorGroupList, setColor, setColorList, setColorGroupList, getColorById, getColorByValue, makeGroupList, addColor }} />;

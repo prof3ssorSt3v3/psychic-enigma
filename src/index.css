@@ -65,6 +65,16 @@ main {
   justify-content: center;
   align-items: center;
 }
+.colorform {
+  border: 1px solid #999;
+  padding: 1rem;
+  max-width: 30ch;
+  & p {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
 .loading {
   font-size: 5rem;
   text-align: center;
