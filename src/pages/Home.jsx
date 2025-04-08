@@ -1,6 +1,7 @@
 import Header from '../components/header';
 import { useColor } from '../context/color.provider';
 import ColorBox from '../components/color.box';
+import Loading from '../components/loading';
 
 export default function Home() {
   const { color, colorList, colorGroupList, setColor, setColorList, setColorGroupList, getColorById, getColorByValue, makeGroupList, addColor } = useColor();
@@ -14,6 +15,7 @@ export default function Home() {
         <h1>Home Page</h1>
         <h2>All the available Colors</h2>
         <section className="boxes">
+          {(!colorList || colorList.length == 0) && <Loading />}
           {colorList.map((c) => (
             <ColorBox key={c.id} clr={c} />
           ))}

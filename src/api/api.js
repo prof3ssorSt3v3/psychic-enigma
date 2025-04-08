@@ -17,6 +17,7 @@ export class API {
 export class ColorError extends Error {
   constructor(msg, _color) {
     super(msg);
+    this.name = 'ColorError';
     this.color = _color;
   }
 }

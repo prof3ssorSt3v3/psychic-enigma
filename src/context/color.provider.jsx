@@ -23,6 +23,7 @@ function ColorProvider(props) {
       return c.id == _id;
     });
     setColor(match);
+    if (!match) throw new ColorError('no matching color', null);
   }
 
   function getColorByValue(_hex) {
